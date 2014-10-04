@@ -51,7 +51,7 @@ Quá trình cài đặt gói phần mềm ntp đã xong. Do ntp hoạt động t
       # service iptables stop
       ```
       
-    Đối với những người đã hiểu về iptables có thể dùng lênh sau để mở port
+Đối với những người đã hiểu về iptables có thể dùng lênh sau để mở port
       ```
       #iptables -A INPUT -p udp --dport 123 -j ACCEPT
       #iptables -A OUTPUT -p udp --sport 123 -j ACCEPT
