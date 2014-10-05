@@ -46,15 +46,24 @@ Quá trình cài đặt gói phần mềm ntp đã xong. Do ntp hoạt động t
       
   Các cách mở port:
       
-    Đối với những người không hiểu nhiều về iptables trong Centos. Các bạn có thể tắt iptables đi bằng sử dụng lệnh
+- Đối với những người không hiểu nhiều về iptables trong Centos. Các bạn có thể tắt iptables đi bằng sử dụng lệnh
       ```
       # service iptables stop
       ```
       
-Đối với những người đã hiểu về iptables có thể dùng lênh sau để mở port
+- Đối với những người đã hiểu về iptables có thể dùng lênh sau để mở port
       ```
       #iptables -A INPUT -p udp --dport 123 -j ACCEPT
       #iptables -A OUTPUT -p udp --sport 123 -j ACCEPT
       ```
+
+- Để ntp luôn được bật
+```
+# chkconfig ntpd on
+```
+- Bước 3 : Khởi động lại dịch vụ ntp
+```
+# service ntp restart
+```
 
 
