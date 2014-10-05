@@ -69,7 +69,7 @@ Các bạn có thể xem mô hình LAB sau
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/4T7BosR.png" alt="" id="screenshot-image">
 
-Quá trình Lab
+Quá trình Lab trên máy client là Linux
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/yu5RSFn.png" alt="" id="screenshot-image">
 
@@ -77,4 +77,27 @@ Quá trình Lab
 ```
 # ntpdate -u [địa chỉ ip của ntp server]
 ```
+
+Quá trình Lab trên máy client là Windown.
+
+Các bạn thức hiện theo các bước sau:
+<img class="image__pic js-image-pic" src="http://i.imgur.com/gBLoFeo.png" alt="" id="screenshot-image">
+
+<img class="image__pic js-image-pic" src="http://i.imgur.com/omLsuJt.png" alt="" id="screenshot-image">
+
+<img class="image__pic js-image-pic" src="http://i.imgur.com/msWdzaN.png" alt="" id="screenshot-image">
+
+*Kết luận:* Quá trình đồng bộ thời gian giữa các máy là công việc đầu tiên và quan trong đối với một hệ thống cần phối hợp với nhau nên bạn cần nắm vững nội dung về ntp. 
+
+Các bạn có thể xem thêm link tham khảo tại đây
+
+[Link tham khảo 1](http://www.tecmint.com/install-ntp-server-in-centos/)
+
+[Link tham khảo 2](http://ask.xmodulo.com/change-date-time-command-line-linux.html)
+
+[Link tham khảo 3](http://www.gocit.vn/bai-viet/network-time-protocol-ntp-tren-linux/)
+
+Người thực hiện: Nguyễn Hoài Nam
+skype: namptit307
+
 
