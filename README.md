@@ -7,7 +7,6 @@ Network-time-protocol
  2. Phương thức hoạt động của ntp
  3. Cài đặt
  4. Mô hình Lab
- 5. Các câu lệnh hay dùng
  
 ====================
 
@@ -26,7 +25,7 @@ Trong hệ thống máy tính đã sử dụng một giao thức có thể độ
 ###### a. Chuẩn bị:
 Chuẩn bị 2 máy cài centos và được kết nối với nhau như trong mô hình sau
 <img class="image__pic js-image-pic" src="http://i.imgur.com/YqfoT1S.png" alt="" id="screenshot-image">
-###### b. Các bươc cài đặt
+###### b. Các bước cài đặt
 - Bước 1: Tải và cài đặt gói ntp
 ```
 # yum -y install ntp 
@@ -46,18 +45,18 @@ Quá trình cài đặt gói phần mềm ntp đã xong. Do ntp hoạt động t
       
   Các cách mở port:
       
-- Đối với những người không hiểu nhiều về iptables trong Centos. Các bạn có thể tắt iptables đi bằng sử dụng lệnh
+- Đối với những bạn không hiểu nhiều về iptables trong Centos. Các bạn có thể tắt iptables đi bằng sử dụng lệnh
       ```
       # service iptables stop
       ```
       
-- Đối với những người đã hiểu về iptables có thể dùng lênh sau để mở port
+- Đối với những bạn đã hiểu về iptables có thể dùng lênh sau để mở port
       ```
       #iptables -A INPUT -p udp --dport 123 -j ACCEPT
       #iptables -A OUTPUT -p udp --sport 123 -j ACCEPT
       ```
 
-- Để ntp luôn được bật
+- Để ntp luôn được bật lên khi khởi động bạn sử dụng câu lệnh
 ```
 # chkconfig ntpd on
 ```
@@ -65,5 +64,17 @@ Quá trình cài đặt gói phần mềm ntp đã xong. Do ntp hoạt động t
 ```
 # service ntp restart
 ```
+#### 4. Mô hình LAB
+Các bạn có thể xem mô hình LAB sau
 
+<img class="image__pic js-image-pic" src="http://i.imgur.com/4T7BosR.png" alt="" id="screenshot-image">
+
+Quá trình Lab
+
+<img class="image__pic js-image-pic" src="http://i.imgur.com/yu5RSFn.png" alt="" id="screenshot-image">
+
+- Câu lệnh để đồng bộ thời gian với máy chủ ngay lập tức
+```
+# ntpdate -u [địa chỉ ip của ntp server]
+```
 
