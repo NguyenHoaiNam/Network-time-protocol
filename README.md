@@ -1,14 +1,31 @@
 Network-time-protocol
 =====================
 
- Xin chào các bạn. Hôm nay tôi sẽ về về vấn đề network time protocol. Một nội dung khá quan trọng đối với một hệ thống. Tôi hi vọng sẽ giúp các bạn nắm được các vấn đề cơ bản trong network time protocol.
- Mục luc:
- 1. Giới thiệu
- 2. Phương thức hoạt động của ntp
- 3. Cài đặt
- 4. Mô hình Lab
- 5. Các câu lênh sửa đổi thời gian
+Xin chào các bạn. Hôm nay tôi sẽ về về vấn đề network time protocol. Một nội dung khá quan trọng đối với một hệ thống. Tôi hi vọng sẽ giúp các bạn nắm được các vấn đề cơ bản trong network time protocol.
+
+- [Mục lục](#undefined)
+			
+- [1. Giới thiệu](#user-content-1-gi%E1%BB%9Bi-thi%E1%BB%87u)
+			
+- [2. Phương thức hoạt động](#user-content-2-ph%C6%B0%C6%A1ng-th%E1%BB%A9c-ho%E1%BA%A1t-%C4%91%E1%BB%99ng)
+			
+- [3. Cài đặt](#user-content-3-c%C3%A0i-%C4%91%E1%BA%B7t)
+					
+     - [a. Chuẩn bị:](#user-content-a-chu%E1%BA%A9n-b%E1%BB%8B)
+					
+     - [b. Các bước cài đặt](#user-content-b-c%C3%A1c-b%C6%B0%E1%BB%9Bc-c%C3%A0i-%C4%91%E1%BA%B7t)
+			
+- [4. Mô hình LAB](#user-content-4-m%C3%B4-h%C3%ACnh-lab)
+			
+- [5. Các câu lệnh đổi thời gian](#user-content-5-c%C3%A1c-c%C3%A2u-l%E1%BB%87nh-%C4%91%E1%BB%95i-th%E1%BB%9Di-gian)
+					
+     - [a. Thay đổi thời gian của hệ thống:](#user-content-a-thay-%C4%91%E1%BB%95i-th%E1%BB%9Di-gian-c%E1%BB%A7a-h%E1%BB%87-th%E1%BB%91ng)
+					
+     - [b. Tăng thêm thời gian cho hệ thống](#user-content-b-t%C4%83ng-th%C3%AAm-th%E1%BB%9Di-gian-cho-h%E1%BB%87-th%E1%BB%91ng)
+				 
+     - [c. Các tùy chọn trong câu lệnh date](#user-content-c-c%C3%A1c-t%C3%B9y-ch%E1%BB%8Dn-trong-c%C3%A2u-l%E1%BB%87nh-date)
  
+
 ====================
 
 #### 1. Giới thiệu
