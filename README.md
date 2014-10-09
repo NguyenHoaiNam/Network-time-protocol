@@ -7,6 +7,7 @@ Network-time-protocol
  2. Phương thức hoạt động của ntp
  3. Cài đặt
  4. Mô hình Lab
+ 5. Các câu lênh sửa đổi thời gian
  
 ====================
 
@@ -86,6 +87,53 @@ Các bạn thức hiện theo các bước sau:
 <img class="image__pic js-image-pic" src="http://i.imgur.com/omLsuJt.png" alt="" id="screenshot-image">
 
 <img class="image__pic js-image-pic" src="http://i.imgur.com/msWdzaN.png" alt="" id="screenshot-image">
+
+#### 5. Các câu lệnh đổi thời gian
+
+Đầu tiên bạn hay tắt dịch vụ ntp đi bằng cách sử dụng câu lệnh
+```
+# service ntpd stop
+```
+###### a. Thay đổi thời gian của hệ thống:
+Cách 1:
+```
+# date +'FORMAT' -s 'thời gian'
+```
+VD: #date + '%Y%m%d %H%M' -s'20141009 2005'
+
+<img class="image__pic js-image-pic" src="http://i.imgur.com/jjvAZT6.png" alt="" id="screenshot-image">
+
+Cách 2: Các bạn có thể dùng sử dụng đúng định dạng của hệ thống 
+```
+#date -s '2014-09-10 20:04:222'
+```
+<img class="image__pic js-image-pic" src="http://i.imgur.com/Kn7JETJ.png" alt="" id="screenshot-image">
+
+###### b. Tăng thêm thời gian cho hệ thống
+
+Các bạn dùng câu lệnh date -s rồi thêm lương gian cần thiết có thể là giờ, phút,giây
+```
+date -s '<khoảng thời gian muốn tăng thêm> [seconds,minutes, hours]'
+```
+
+VD:
+
+<img class="image__pic js-image-pic" src="http://i.imgur.com/hAZTiPR.png" alt="" id="screenshot-image">
+các bạn làm tương tự với giờ và phút
+
+###### c. Các tùy chọn trong câu lệnh date
+
+|%H | Lựa chọn giờ |
+|---|--------------|
+|%M | Lựa chọn phút|
+|%Y | Hiển thị năm  |
+|%m | Hiển thị tháng |
+|%F | Hiển thị thông tin đầy đủ về thời gian |
+|%d | Hiển thị ngày |
+
+Các bạn có thể xem thêm các tùy chọn của lệnh date tại đây
+
+[ Chi tiết về date](http://linux.about.com/od/commands/l/blcmdl1_date.htm)
 
 *Kết luận:* Quá trình đồng bộ thời gian giữa các máy là công việc đầu tiên và quan trong đối với một hệ thống cần phối hợp với nhau nên bạn cần nắm vững nội dung về ntp. 
 
